@@ -11,7 +11,15 @@ export class OddOccurrencesInArrayComponent implements OnInit {
 
   ngOnInit() {
     const arr = [ 9,3,9,3,9,4,4,2,3,9];
-    console.log(this.fastSolution(arr));
+    console.log(this.veryFastSolution(arr));
+  }
+
+  veryFastSolution(arr){
+    let result = 0;
+    for(let elem of arr){
+       result ^= elem;
+    }
+    return result;
   }
 
   fastSolution(arr){
