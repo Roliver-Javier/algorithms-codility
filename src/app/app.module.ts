@@ -8,10 +8,11 @@ import { BinaryGapComponent } from './binary-gap/binary-gap.component';
 import { OddOccurrencesInArrayComponent } from './odd-occurrences-in-array/odd-occurrences-in-array.component';
 import { CyclickRotationComponent } from './cyclick-rotation/cyclick-rotation.component';
 import { FrogJumpComponent } from './time-complexity/frog-jump/frog-jump.component';
+import { PermMissingElemComponent } from './time-complexity/perm-missing-elem/perm-missing-elem.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, BinaryGapComponent, OddOccurrencesInArrayComponent, CyclickRotationComponent, FrogJumpComponent ],
+  declarations: [ AppComponent, HelloComponent, BinaryGapComponent, OddOccurrencesInArrayComponent, CyclickRotationComponent, FrogJumpComponent, PermMissingElemComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
