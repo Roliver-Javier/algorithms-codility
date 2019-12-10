@@ -10,9 +10,7 @@ export class PermMissingElemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.solution([5,7,4,3,2,1])
-
-    console.log(this.SolutionB([1,2,4,5]));
+    console.log(this.SolutionC([3,4]));
   }
 
   // 50% to 55%
@@ -35,12 +33,19 @@ export class PermMissingElemComponent implements OnInit {
     let result = 0, length = A.length;
     if(length === 0) return 1;
     else
-    for(let n = 0; n < length; n++){    
-      if((A[ n ] - 1) !== A[n - 1]){
+    for(let n = 0; n < length; n++){  
+      if(A[n] > 1 && (A[ n ] - 1) !== A[n - 1]){
         result = A[n] - 1;
       }
     }
     return (result !== 0)? result : A[length-1] + 1;
   }
+  
+  // 100%
+  SolutionC(A:number[]){
+    let n = A.length + 1;
+    return (n + ( n * n - n )/ 2) - A.reduce((a,b)=> a + b );
+  }
+
 
 }
