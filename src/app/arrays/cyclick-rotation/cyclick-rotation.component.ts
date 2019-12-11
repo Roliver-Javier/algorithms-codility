@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cyclick-rotation',
-  templateUrl: './cyclick-rotation.component.html',
+  template: '',
   styleUrls: ['./cyclick-rotation.component.css']
 })
 export class CyclickRotationComponent implements OnInit {

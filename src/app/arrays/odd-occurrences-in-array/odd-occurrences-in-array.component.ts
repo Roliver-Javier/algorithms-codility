@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-odd-occurrences-in-array',
-  templateUrl: './odd-occurrences-in-array.component.html',
+  template: '',
   styleUrls: ['./odd-occurrences-in-array.component.css']
 })
 export class OddOccurrencesInArrayComponent implements OnInit {
