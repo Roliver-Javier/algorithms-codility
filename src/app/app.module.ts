@@ -7,6 +7,7 @@ import { FrogJumpComponent } from './time-complexity/frog-jump/frog-jump.compone
 import { PermMissingElemComponent } from './time-complexity/perm-missing-elem/perm-missing-elem.component';
 import { CyclickRotationComponent } from './arrays/cyclick-rotation/cyclick-rotation.component';
 import { OddOccurrencesInArrayComponent } from './arrays/odd-occurrences-in-array/odd-occurrences-in-array.component';
+import { TapeEquilibriumComponent } from './time-complexity/tape-equilibrium/tape-equilibrium.component';
 
 
 const algorithms = {
@@ -28,7 +29,7 @@ const algorithms = {
   declarations: [ AppComponent,
   ...algorithms.iterations,
   ...algorithms.arrays,  
-  ...algorithms.timeComplexity
+  ...algorithms.timeComplexity, TapeEquilibriumComponent
   ],
   bootstrap:    [ AppComponent ]
 })
