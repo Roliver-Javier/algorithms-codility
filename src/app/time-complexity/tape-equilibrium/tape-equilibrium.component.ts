@@ -21,20 +21,6 @@ export class TapeEquilibriumComponent implements OnInit {
 }
 
 class FastSolution{
-  constructor(arr: number[]){
-      console.log(this.Solution(arr));
-  }
-
-  Solution(A: number[]){
-    let arr1 = [], arr2 = [];
-    for(let i = 0, j = A.length; i < A.length; i++, j--){
-      arr1.push(A[i]);
-      console.log(A.splice(i, j));
-    
-    }
-    console.log(arr1);
-    console.log(arr2);
-  }
 
 }
 

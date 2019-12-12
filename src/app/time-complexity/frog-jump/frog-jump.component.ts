@@ -10,7 +10,6 @@ export class FrogJumpComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('hola');
     console.log(this.fastSolution(10,300,20));
     console.log(this.slowSolution(10,300,20));
   }
