@@ -6,26 +6,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tape-equilibrium.component.css']
 })
 export class TapeEquilibriumComponent implements OnInit {
-
+  /*
+    [7][5,1,7] = 7 - 13 = -6
+    [7,5][1,7] = 12 - 8 = 4
+    [7,5,1][7] = 13 - 7 = 6
+*/
   constructor() { }
 
   ngOnInit() {
-    console.log(this.Solution([1,2]));
+    let arr = [7, 5, 1, 7];
+    new SlowSolution(arr);
+    // new FastSolution(arr);
   }
-/*
-[1][2] = 1 - 2 = -1
+}
 
+class FastSolution{
+  constructor(arr: number[]){
+      console.log(this.Solution(arr));
+  }
 
-[1][1,2] = 1 - 3 = -2
-[1,1][2] = 2 - 2 = 0
+  Solution(A: number[]){
+    let arr1 = [], arr2 = [];
+    for(let i = 0, j = A.length; i < A.length; i++, j--){
+      arr1.push(A[i]);
+      console.log(A.splice(i, j));
+    
+    }
+    console.log(arr1);
+    console.log(arr2);
+  }
 
-[5][6,2,4,1] = 5 - 13 = -8
-[5,6][2,4,1] = 11 - 7 = 4
-[5,6,2][4,1] = 13 - 5 = 8
-[5,6,2,4][1] = 17 - 1 = 16
+}
 
-*/
-
+class SlowSolution{
+  constructor(arr: number[]){
+    console.log(this.Solution(arr));
+  }
   Solution(A: number[]){
     let arr1 = [], results = [], i = 0, copyArr = A;
     const length = A.length;
@@ -39,13 +55,28 @@ export class TapeEquilibriumComponent implements OnInit {
     console.log(results);
     return this.getMinimalElem(results);
   }
-
   getMinimalElem(A: any[]){
-    return A.sort((a,b)=> a < b? -1 : 1)[0];
+    let previous = A[0];
+    for(let i = 0; i < A.length ; i++){
+      if(A[i] < previous)  previous = A[i];
+    }
+    return previous;
   }
-  
+  customSplice(A:number[], start, end){
+    let arr = [], copyArr = A;
+    if(start < end && A.length > 1){
+      for(let i = 0; i < A.length; i++){
+        if(i >= start  && i <= end - 1){
+          arr.push(A[i]);
+        }
+      }
+    }
+    return arr;
+  }
   sumArrElem(A: any[]){
-    return A.reduce((a,b)=> a + b);
+    let total = 0;
+    for(let i = 0; i < A.length; i++)
+      total += A[i];
+    return total;
   }
-
 }
