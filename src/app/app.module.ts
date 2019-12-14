@@ -8,6 +8,7 @@ import { PermMissingElemComponent } from './time-complexity/perm-missing-elem/pe
 import { CyclickRotationComponent } from './arrays/cyclick-rotation/cyclick-rotation.component';
 import { OddOccurrencesInArrayComponent } from './arrays/odd-occurrences-in-array/odd-occurrences-in-array.component';
 import { TapeEquilibriumComponent } from './time-complexity/tape-equilibrium/tape-equilibrium.component';
+import { CoutingElementsComponent } from './extras/couting-elements/couting-elements.component';
 
 
 const algorithms = {
@@ -29,7 +30,7 @@ const algorithms = {
   declarations: [ AppComponent,
   ...algorithms.iterations,
   ...algorithms.arrays,  
-  ...algorithms.timeComplexity, TapeEquilibriumComponent
+  ...algorithms.timeComplexity, TapeEquilibriumComponent, CoutingElementsComponent
   ],
   bootstrap:    [ AppComponent ]
 })
