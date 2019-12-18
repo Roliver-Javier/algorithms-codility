@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-couting-elements',
-  templateUrl: './couting-elements.component.html',
+  template: '',
   styleUrls: ['./couting-elements.component.css']
 })
 export class CoutingElementsComponent implements OnInit {
@@ -11,7 +11,7 @@ export class CoutingElementsComponent implements OnInit {
 
   /**
    * [0,0,4,2,4,5] // numbers
-   * [2,0,1,0,2,1] // count
+   * [2,0,1,0,2,1] // count results
    * [0,1,2,3,4,5] // indexes
    */
   ngOnInit() {
@@ -20,13 +20,14 @@ export class CoutingElementsComponent implements OnInit {
   }
 
   solution(A){
-    let obj = {};
+    let B = new Array(A.length).fill(0);
     for(let i = 0; i < A.length; i++){
-      if(!obj.hasOwnProperty(A[i])) obj[A[i]]= 1;
-      else
-       obj[A[i]] +=1;
+      if(!B[A[i]]) B[A[i]] = 1;
+      else{
+        B[A[i]] += 1;
+      }
     }
-    return Object.values(obj);
+    return B;
   }
 
 }
