@@ -9,6 +9,7 @@ import { CyclickRotationComponent } from './arrays/cyclick-rotation/cyclick-rota
 import { OddOccurrencesInArrayComponent } from './arrays/odd-occurrences-in-array/odd-occurrences-in-array.component';
 import { TapeEquilibriumComponent } from './time-complexity/tape-equilibrium/tape-equilibrium.component';
 import { CoutingElementsComponent } from './extras/couting-elements/couting-elements.component';
+import { SwapElementsComponent } from './extras/swap-elements/swap-elements.component';
 
 
 const algorithms = {
@@ -30,7 +31,7 @@ const algorithms = {
   declarations: [ AppComponent,
   ...algorithms.iterations,
   ...algorithms.arrays,  
-  ...algorithms.timeComplexity, TapeEquilibriumComponent, CoutingElementsComponent
+  ...algorithms.timeComplexity, TapeEquilibriumComponent, CoutingElementsComponent, SwapElementsComponent
   ],
   bootstrap:    [ AppComponent ]
 })
