@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-swap-elements',
-  templateUrl: './swap-elements.component.html',
+  template: '',
   styleUrls: ['./swap-elements.component.css']
 })
 export class SwapElementsComponent implements OnInit {
@@ -10,10 +10,10 @@ export class SwapElementsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.solution([],[],0);
+    this.slowSolution([2,3],[4,1],0);
   }
-
-  solution(A: number[],B,m){
+  
+  slowSolution(A: number[],B: number[],m){
     let n = A.length,
     sum_a = A.reduce((a,b)=>a+b),
     sum_b = B.reduce((a,b)=>a+b);
@@ -30,6 +30,8 @@ export class SwapElementsComponent implements OnInit {
         sum_b += change;
       }
     }
+    console.log(sum_a);
+    console.log(sum_b);
     return false;
   }
 
