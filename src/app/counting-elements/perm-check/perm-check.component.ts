@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-perm-check',
-  templateUrl: './perm-check.component.html',
+  template: 'PermCheck',
   styleUrls: ['./perm-check.component.css']
 })
 export class PermCheckComponent implements OnInit {
