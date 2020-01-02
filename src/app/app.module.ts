@@ -11,6 +11,7 @@ import { TapeEquilibriumComponent } from './time-complexity/tape-equilibrium/tap
 import { CoutingElementsComponent } from './extras/couting-elements/couting-elements.component';
 import { SwapElementsComponent } from './extras/swap-elements/swap-elements.component';
 
+import { PermCheckComponent } from './counting-elements/perm-check/perm-check.component';
 
 const algorithms = {
   iterations: [ 
@@ -22,7 +23,15 @@ const algorithms = {
   ],
   timeComplexity: [ 
     FrogJumpComponent, 
-    PermMissingElemComponent 
+    PermMissingElemComponent,
+    TapeEquilibriumComponent
+  ],
+  countingElements:[
+    PermCheckComponent
+  ],
+  extras:[
+    CoutingElementsComponent, 
+    SwapElementsComponent
   ]
 };
 
@@ -31,7 +40,9 @@ const algorithms = {
   declarations: [ AppComponent,
   ...algorithms.iterations,
   ...algorithms.arrays,  
-  ...algorithms.timeComplexity, TapeEquilibriumComponent, CoutingElementsComponent, SwapElementsComponent
+  ...algorithms.timeComplexity, 
+  ...algorithms.countingElements,
+  ...algorithms.extras
   ],
   bootstrap:    [ AppComponent ]
 })
